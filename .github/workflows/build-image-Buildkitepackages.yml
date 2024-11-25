@@ -38,7 +38,7 @@ jobs:
         context: .
         file: ./Dockerfile
         push: true
-        tags: packages.buildkite.com/grafana-demo/popular-repos:${{ github.event.pull_request.head.sha || github.sha }}
+        tags: packages.buildkite.com/grafana-demo/popular-repos/popular-repos:${{ github.event.pull_request.head.sha || github.sha }}
 
     - run: |
         echo ${{ steps.build-image-outputs.metadata }}
